@@ -1,0 +1,145 @@
+/* General Navbar Styles */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px; /* Increased padding for a bigger navbar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin:-10px;
+    position: relative;
+}
+
+/* Logo Section */
+.logo-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0;
+}
+
+.logo-img {
+    height: 70px; /* Increased logo size */
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px; /* More spacing between logo and tagline */
+}
+
+.tagline {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+}
+
+/* Navbar Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 25px; /* Adjust spacing between menu items */
+}
+
+.nav-link {
+    font-size: 15px; /* Increased text size */
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0; /* Removed box effect */
+    transition: color 0.3s ease-in-out;
+    background: none; /* Ensures no box background */
+    border: none;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    min-width: 180px;
+    padding: 8px 0;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+
+/* Mobile Menu */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 220px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+}
